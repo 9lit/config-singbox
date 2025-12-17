@@ -5,12 +5,12 @@ name = "out_proxy"
 type = "select"
 rule = [".*", "[]urltest", "[]out_direct"]
 
-# [[custom_groups]]
-# name = "urltest"
-# type = "url-test"
-# rule = [".*"]
-# url = "http://www.gstatic.com/generate_204"
-# interval = 300
+[[custom_groups]]
+name = "urltest"
+type = "url-test"
+rule = [".*"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
 
 # [[custom_groups]]
 # name = "google"
