@@ -23,7 +23,7 @@ singbox_rule_base = "https://raw.githubusercontent.com/9lit/generate-singbox-tem
 #exclude_remarks = []
 
 [[custom_groups]]
-import = "https://raw.githubusercontent.com/9lit/generate-singbox-template/refs/heads/rule-set/template/configs/android_config_dns.json"
+import = "https://raw.githubusercontent.com/9lit/sing-box/refs/heads/rule-set/groups_not.toml"
 
 #[[rulesets]]
 #import = ""
