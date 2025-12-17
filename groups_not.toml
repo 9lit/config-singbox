@@ -3,10 +3,10 @@
 [[custom_groups]]
 name = "out_proxy"
 type = "select"
-rule = [".*", "[]AUTO", "[]out_direct"]
+rule = [".*", "[]urltest", "[]out_direct"]
 
 [[custom_groups]]
-name = "AUTO"
+name = "urltest"
 type = "url-test"
 rule = [".*"]
 url = "http://www.gstatic.com/generate_204"

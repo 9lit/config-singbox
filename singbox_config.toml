@@ -28,9 +28,9 @@ import = "https://raw.githubusercontent.com/9lit/sing-box/refs/heads/rule-set/gr
 #[[rulesets]]
 #import = ""
 
-[[template_args]]
-key = "clash.dns.port"
-value = "5353"
+# [[template_args]]
+# key = "clash.dns.port"
+# value = "5353"
 
 [ruleset]
 enabled = false
