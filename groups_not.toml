@@ -1,9 +1,9 @@
 # for forcerule.yml
 
-# [[custom_groups]]
-# name = "out_proxy"
-# type = "select"
-# rule = [".*", "[]urltest", "[]out_direct"]
+[[custom_groups]]
+name = "out_proxy"
+type = "select"
+rule = [".*", "[]urltest", "[]out_direct"]
 
 # [[custom_groups]]
 # name = "urltest"
