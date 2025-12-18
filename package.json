@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "rules": [
+        {
+            "package_name": [
+                "com.termux",
+                "com.taobao.taobao",
+                "com.eg.android.AlipayGphone",
+                "com.tencent.mm",
+                "com.tencent.tmgp.sgame",
+                "com.phoenix.read",
+                "com.dragon.read",
+                "com.bilibili.app.in"
+            ]
+        }
+    ]
+}
