@@ -65,9 +65,9 @@
             {
                 "rule_set": [
                     "site-github",
+                    "site-google-play",
                     "site-telegram",
-                    "site-microsoft",
-                    "site-google-play"
+                    "site-microsoft"
                 ],
                 "action": "route",
                 "server": "dns_dot_Google"
@@ -82,8 +82,8 @@
             },
             {
                 "rule_set": [
-                    "adguard",
-                    "site-ads-all"
+                    "site-ads-all",
+                    "adguard"
                 ],
                 "action": "route",
                 "server": "dns_block"
@@ -167,9 +167,9 @@
             {
                 "rule_set": [
                     "site-github",
+                    "site-google-play",
                     "site-telegram",
-                    "site-microsoft",
-                    "site-google-play"
+                    "site-microsoft"
                 ],
                 "action": "route",
                 "outbound": "out_proxy"
@@ -185,8 +185,8 @@
             },
             {
                 "rule_set": [
-                    "adguard",
-                    "site-ads-all"
+                    "site-ads-all",
+                    "adguard"
                 ],
                 "action": "reject"
             }
@@ -200,51 +200,45 @@
             },
             {
                 "type": "remote",
-                "tag": "package_cn",
+                "tag": "site-ads-all",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/package_cn.srs"
+                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-ads-all.srs"
             },
             {
                 "type": "remote",
-                "tag": "site_ads_all",
+                "tag": "site-cn",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site_ads_all.srs"
+                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-cn.srs"
             },
             {
                 "type": "remote",
-                "tag": "site_cn",
+                "tag": "site-github",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site_cn.srs"
+                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-github.srs"
             },
             {
                 "type": "remote",
-                "tag": "site_github",
+                "tag": "site-google-play",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site_github.srs"
+                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-google-play.srs"
             },
             {
                 "type": "remote",
-                "tag": "site_google_play",
+                "tag": "site-microsoft-cn",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site_google_play.srs"
+                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-microsoft-cn.srs"
             },
             {
                 "type": "remote",
-                "tag": "site_microsoft",
+                "tag": "site-microsoft",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site_microsoft.srs"
+                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-microsoft.srs"
             },
             {
                 "type": "remote",
-                "tag": "site_microsoft_cn",
+                "tag": "site-telegram",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site_microsoft_cn.srs"
-            },
-            {
-                "type": "remote",
-                "tag": "site_telegram",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site_telegram.srs"
+                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-telegram.srs"
             }
         ],
         "final": "out_proxy"
