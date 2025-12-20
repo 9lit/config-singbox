@@ -7,13 +7,13 @@ const compatible_outbound = {
 
 // 判断是否是手机客户端
 function isMobile() {
-    const userAgentInfo = navigator.userAgent;
-    const mobileAgents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-     const mobileFlag = mobileAgents.some((mobileAgent) => {
-        return userAgentInfo.indexOf(mobileAgent) > 0;
-    });
+  const userAgentInfo = navigator.userAgent;
+  const mobileAgents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+  const mobileFlag = mobileAgents.some((mobileAgent) => {
+    return userAgentInfo.indexOf(mobileAgent) > 0;
+  });
 
-    return mobileFlag;
+  return mobileFlag;
 }
 
 let compatible
@@ -51,31 +51,8 @@ config.outbounds.forEach(outbound => {
   }
 });
 
-// 添加 adguard 规则
-
-const adguard_rule_set = {
-  tag: 'adguard',
-  type: 'remote',
-  url: "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/adguard.srs",
-  download_detour: "out_direct"
-}
-
-config.route.rule_set.push(adguard_rule_set)
-
-config.route.rules.map(i => {
-  if (['reject'].includes(i.action)) {
-    i.rule_set.push(adguard_rule_set.tag)
-  }
-})
-
-config.dns.rules.map(i => {
-  if (['dns_block'].includes(i.server)) {
-    i.rule_set.push(adguard_rule_set.tag)
-  }
-})
-
 // 如果为 true 则将 override_android_vpn = true
-config.route.override_android_vpn = isMobile()  
+config.route.override_android_vpn = isMobile()
 
 $content = JSON.stringify(config, null, 2)
 
