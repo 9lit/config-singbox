@@ -64,10 +64,10 @@
             },
             {
                 "rule_set": [
-                    "site-google-play",
+                    "site-microsoft",
                     "site-telegram",
-                    "site-github",
-                    "site-microsoft"
+                    "site-google-play",
+                    "site-github"
                 ],
                 "action": "route",
                 "server": "dns_dot_Google"
@@ -166,10 +166,10 @@
             },
             {
                 "rule_set": [
-                    "site-google-play",
+                    "site-microsoft",
                     "site-telegram",
-                    "site-github",
-                    "site-microsoft"
+                    "site-google-play",
+                    "site-github"
                 ],
                 "action": "route",
                 "outbound": "out_proxy"
