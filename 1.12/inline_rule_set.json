@@ -64,18 +64,18 @@
             },
             {
                 "rule_set": [
-                    "site-microsoft",
-                    "site-telegram",
+                    "site-github",
                     "site-google-play",
-                    "site-github"
+                    "site-telegram",
+                    "site-microsoft"
                 ],
                 "action": "route",
                 "server": "dns_dot_Google"
             },
             {
                 "rule_set": [
-                    "site-microsoft-cn",
-                    "site-cn"
+                    "site-cn",
+                    "site-microsoft-cn"
                 ],
                 "action": "route",
                 "server": "dns_dot_Ali"
@@ -166,10 +166,10 @@
             },
             {
                 "rule_set": [
-                    "site-microsoft",
-                    "site-telegram",
+                    "site-github",
                     "site-google-play",
-                    "site-github"
+                    "site-telegram",
+                    "site-microsoft"
                 ],
                 "action": "route",
                 "outbound": "out_proxy"
@@ -177,8 +177,8 @@
             {
                 "ip_is_private": true,
                 "rule_set": [
-                    "site-microsoft-cn",
-                    "site-cn"
+                    "site-cn",
+                    "site-microsoft-cn"
                 ],
                 "action": "route",
                 "outbound": "out_direct"
