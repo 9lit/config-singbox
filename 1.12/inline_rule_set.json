@@ -66,8 +66,8 @@
                 "rule_set": [
                     "site-github",
                     "site-telegram",
-                    "site-microsoft",
-                    "site-google-play"
+                    "site-google-play",
+                    "site-microsoft"
                 ],
                 "action": "route",
                 "server": "dns_dot_Google"
@@ -82,8 +82,8 @@
             },
             {
                 "rule_set": [
-                    "adguard",
-                    "site-ads-all"
+                    "site-ads-all",
+                    "adguard"
                 ],
                 "action": "route",
                 "server": "dns_block"
@@ -168,8 +168,8 @@
                 "rule_set": [
                     "site-github",
                     "site-telegram",
-                    "site-microsoft",
-                    "site-google-play"
+                    "site-google-play",
+                    "site-microsoft"
                 ],
                 "action": "route",
                 "outbound": "out_proxy"
@@ -185,8 +185,8 @@
             },
             {
                 "rule_set": [
-                    "adguard",
-                    "site-ads-all"
+                    "site-ads-all",
+                    "adguard"
                 ],
                 "action": "reject"
             }
