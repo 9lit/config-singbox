@@ -64,26 +64,26 @@
             },
             {
                 "rule_set": [
-                    "site-github",
-                    "site-google-play",
                     "site-telegram",
-                    "site-microsoft"
+                    "site-google-play",
+                    "site-microsoft",
+                    "site-github"
                 ],
                 "action": "route",
                 "server": "dns_dot_Google"
             },
             {
                 "rule_set": [
-                    "site-cn",
-                    "site-microsoft-cn"
+                    "site-microsoft-cn",
+                    "site-cn"
                 ],
                 "action": "route",
                 "server": "dns_dot_Ali"
             },
             {
                 "rule_set": [
-                    "site-ads-all",
-                    "adguard"
+                    "adguard",
+                    "site-ads-all"
                 ],
                 "action": "route",
                 "server": "dns_block"
@@ -166,10 +166,10 @@
             },
             {
                 "rule_set": [
-                    "site-github",
-                    "site-google-play",
                     "site-telegram",
-                    "site-microsoft"
+                    "site-google-play",
+                    "site-microsoft",
+                    "site-github"
                 ],
                 "action": "route",
                 "outbound": "out_proxy"
@@ -177,16 +177,16 @@
             {
                 "ip_is_private": true,
                 "rule_set": [
-                    "site-cn",
-                    "site-microsoft-cn"
+                    "site-microsoft-cn",
+                    "site-cn"
                 ],
                 "action": "route",
                 "outbound": "out_direct"
             },
             {
                 "rule_set": [
-                    "site-ads-all",
-                    "adguard"
+                    "adguard",
+                    "site-ads-all"
                 ],
                 "action": "reject"
             }
@@ -471,6 +471,10 @@
                             "da.mgtv.com",
                             "das-rpt-log.ucloud.cn",
                             "data.flurry.com",
+                            "data.mistat.india.xiaomi.com",
+                            "data.mistat.intl.xiaomi.com",
+                            "data.mistat.rus.xiaomi.com",
+                            "data.mistat.xiaomi.com",
                             "dc.letv.com",
                             "decide.mixpanel.com",
                             "demdex.net",
@@ -610,6 +614,7 @@
                             "log.v2.hunantv.com",
                             "log2.sina.cn",
                             "logs.amap.com",
+                            "logupdate.avlyun.sec.miui.com",
                             "lqc006.com",
                             "lstat.youku.com",
                             "lu.sogou.com",
@@ -633,7 +638,6 @@
                             "microsoftads.com",
                             "mipcache.bdstatic.com",
                             "misc.in.duokanbox.com",
-                            "mistat.xiaomi.com",
                             "mixer.sina.cn",
                             "mlog.hiido.com",
                             "moat.com",
@@ -2405,6 +2409,7 @@
                             "agoraio.cn",
                             "agoralab.co",
                             "agrantsem.com",
+                            "ahfda.com",
                             "ahitv.com",
                             "aicdn.com",
                             "aichaoxing.com",
@@ -2659,6 +2664,7 @@
                             "asczwa.com",
                             "asczxcefsv.com",
                             "asfiovnxocqpcry.com.cn",
+                            "askdiandian.com",
                             "asklib.com",
                             "asklink.com",
                             "asktug.com",
@@ -3894,6 +3900,10 @@
                             "daocloud.io",
                             "daojia.com",
                             "daovoice.io",
+                            "data.mistat.india.xiaomi.com",
+                            "data.mistat.intl.xiaomi.com",
+                            "data.mistat.rus.xiaomi.com",
+                            "data.mistat.xiaomi.com",
                             "data.pharmacodia.com",
                             "dataeye.com",
                             "datasea.cn",
@@ -3986,6 +3996,7 @@
                             "dianchacha.com",
                             "diandao.org",
                             "diandian.com",
+                            "diandianlife.top",
                             "diandianqi.com",
                             "dianping.com",
                             "dianwannan.com",
@@ -5180,6 +5191,8 @@
                             "icphoto.cn",
                             "icplishi.com",
                             "ics.design",
+                            "ictbda.cn",
+                            "ictbda.com",
                             "icve.com.cn",
                             "idcgcloudcs.com",
                             "idcquan.com",
@@ -5258,6 +5271,7 @@
                             "imgcook.com",
                             "imgo.tv",
                             "imgstat.baidu.com",
+                            "immersivetranslate.cn",
                             "imooc.com",
                             "imp.go.sohu.com",
                             "imqq.com",
@@ -6015,6 +6029,7 @@
                             "log2.sina.cn",
                             "logiseasy.com",
                             "logs.amap.com",
+                            "logupdate.avlyun.sec.miui.com",
                             "longhoo.net",
                             "longone.com.cn",
                             "longre.com",
@@ -6144,6 +6159,7 @@
                             "me4399.com",
                             "mechina.org",
                             "mechrevo.com",
+                            "medalink.cn",
                             "media.paperclipclub.net",
                             "mediav.com",
                             "medicexam.net",
@@ -6248,7 +6264,6 @@
                             "mirrors.yun-idc.com",
                             "misc.in.duokanbox.com",
                             "missjia.net",
-                            "mistat.xiaomi.com",
                             "mitvos.com",
                             "miui.com",
                             "miusi.co",
@@ -6279,6 +6294,7 @@
                             "modelarts-maas.com",
                             "modelers.cn",
                             "modernjs.cn",
+                            "modex.com.cn",
                             "moegirl.org",
                             "moegirl.org.cn",
                             "mofang.com",
@@ -8328,6 +8344,7 @@
                             "xhlsgs.com",
                             "xhscdn.com",
                             "xhscdn.net",
+                            "xhslink.com",
                             "xiachufang.com",
                             "xiamai.net",
                             "xiamenair.com",
@@ -8408,6 +8425,7 @@
                             "xinwuji.com",
                             "xinyan.cn",
                             "xinyuanfin.com",
+                            "xir.cn",
                             "xishanju.com",
                             "xitong8.com",
                             "xitu.com",
@@ -8889,31 +8907,31 @@
                             "zztfly.com"
                         ],
                         "domain_regex": [
+                            ".+\\.awsdns-cn-[0-9][a-e0-9]\\.cn$",
+                            "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.xn--ngstr-lra8j\\.com$",
                             "\\.(.+-)?ap-chongqing(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            "\\.(.+-)?ap-shanghai(-.+)?\\.myqcloud\\.com$",
-                            "\\.(.+-)?ap-guangzhou(-.+)?\\.myqcloud\\.com$",
-                            "\\.(.+-)?ap-shanghai(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            "^epicgames-download\\d-\\d+\\.file\\.myqcloud\\.com$",
-                            "\\.(.+-)?ap-chengdu(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            "^images(-\\d)?\\.gog-statics\\.com$",
-                            "\\.(.+-)?ap-nanjing(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
+                            "\\.(.+-)?ap-beijing(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
+                            "\\.(.+-)?ap-shenzhen(-.+)?\\.myqcloud\\.com$",
+                            "\\.(.+-)?ap-chengdu(-.+)?\\.myqcloud\\.com$",
+                            "^cdn\\d-epicgames-\\d+\\.file\\.myqcloud\\.com$",
+                            "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.googlevideo\\.com$",
                             "^nis.+\\.10010\\.com$",
                             ".+\\.awsdns-cn-[0-9][0-9]\\.(biz|com|net|top)$",
-                            "\\.(.+-)?ap-shenzhen(-.+)?\\.myqcloud\\.com$",
-                            "\\.(.+-)?ap-shenzhen(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            ".+\\.awsdns-cn-[0-9][a-e0-9]\\.cn$",
-                            "^cdn-akamai-.+\\.gog-services\\.com$",
-                            "\\.(.+-)?ap-chongqing(-.+)?\\.myqcloud\\.com$",
-                            "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.googlevideo\\.com$",
-                            "\\.(.+-)?ap-chengdu(-.+)?\\.myqcloud\\.com$",
-                            "\\.(.+-)?ap-nanjing(-.+)?\\.myqcloud\\.com$",
-                            "\\.(.+-)?ap-beijing(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            "\\.(.+-)?ap-beijing(-.+)?\\.myqcloud\\.com$",
-                            "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.xn--ngstr-lra8j\\.com$",
+                            "\\.(.+-)?ap-guangzhou(-.+)?\\.myqcloud\\.com$",
+                            "\\.(.+-)?ap-shanghai(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
                             "\\.(.+-)?ap-guangzhou(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
+                            "\\.(.+-)?ap-chongqing(-.+)?\\.myqcloud\\.com$",
                             "^.+-mihayo\\.akamaized\\.net$",
+                            "^cdn-akamai-.+\\.gog-services\\.com$",
+                            "\\.(.+-)?ap-nanjing(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
+                            "\\.(.+-)?ap-nanjing(-.+)?\\.myqcloud\\.com$",
+                            "\\.(.+-)?ap-shenzhen(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
+                            "^epicgames-download\\d-\\d+\\.file\\.myqcloud\\.com$",
+                            "^images(-\\d)?\\.gog-statics\\.com$",
                             "^gog-cdn-.+\\.footprint\\.net$",
-                            "^cdn\\d-epicgames-\\d+\\.file\\.myqcloud\\.com$"
+                            "\\.(.+-)?ap-beijing(-.+)?\\.myqcloud\\.com$",
+                            "\\.(.+-)?ap-chengdu(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
+                            "\\.(.+-)?ap-shanghai(-.+)?\\.myqcloud\\.com$"
                         ]
                     }
                 ]

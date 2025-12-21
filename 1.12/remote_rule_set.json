@@ -64,26 +64,26 @@
             },
             {
                 "rule_set": [
-                    "site-github",
-                    "site-google-play",
                     "site-telegram",
-                    "site-microsoft"
+                    "site-google-play",
+                    "site-microsoft",
+                    "site-github"
                 ],
                 "action": "route",
                 "server": "dns_dot_Google"
             },
             {
                 "rule_set": [
-                    "site-cn",
-                    "site-microsoft-cn"
+                    "site-microsoft-cn",
+                    "site-cn"
                 ],
                 "action": "route",
                 "server": "dns_dot_Ali"
             },
             {
                 "rule_set": [
-                    "site-ads-all",
-                    "adguard"
+                    "adguard",
+                    "site-ads-all"
                 ],
                 "action": "route",
                 "server": "dns_block"
@@ -166,10 +166,10 @@
             },
             {
                 "rule_set": [
-                    "site-github",
-                    "site-google-play",
                     "site-telegram",
-                    "site-microsoft"
+                    "site-google-play",
+                    "site-microsoft",
+                    "site-github"
                 ],
                 "action": "route",
                 "outbound": "out_proxy"
@@ -177,16 +177,16 @@
             {
                 "ip_is_private": true,
                 "rule_set": [
-                    "site-cn",
-                    "site-microsoft-cn"
+                    "site-microsoft-cn",
+                    "site-cn"
                 ],
                 "action": "route",
                 "outbound": "out_direct"
             },
             {
                 "rule_set": [
-                    "site-ads-all",
-                    "adguard"
+                    "adguard",
+                    "site-ads-all"
                 ],
                 "action": "reject"
             }
