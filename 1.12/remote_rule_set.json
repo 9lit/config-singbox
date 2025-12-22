@@ -64,9 +64,9 @@
             },
             {
                 "rule_set": [
-                    "site-telegram",
-                    "site-google-play",
                     "site-microsoft",
+                    "site-google-play",
+                    "site-telegram",
                     "site-github"
                 ],
                 "action": "route",
@@ -82,8 +82,8 @@
             },
             {
                 "rule_set": [
-                    "adguard",
-                    "site-ads-all"
+                    "site-ads-all",
+                    "adguard"
                 ],
                 "action": "route",
                 "server": "dns_block"
@@ -166,9 +166,9 @@
             },
             {
                 "rule_set": [
-                    "site-telegram",
-                    "site-google-play",
                     "site-microsoft",
+                    "site-google-play",
+                    "site-telegram",
                     "site-github"
                 ],
                 "action": "route",
@@ -185,8 +185,8 @@
             },
             {
                 "rule_set": [
-                    "adguard",
-                    "site-ads-all"
+                    "site-ads-all",
+                    "adguard"
                 ],
                 "action": "reject"
             }
