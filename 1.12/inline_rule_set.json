@@ -65,9 +65,9 @@
             {
                 "rule_set": [
                     "site-github",
-                    "site-microsoft",
                     "site-telegram",
-                    "site-google-play"
+                    "site-google-play",
+                    "site-microsoft"
                 ],
                 "action": "route",
                 "server": "dns_dot_Google"
@@ -167,9 +167,9 @@
             {
                 "rule_set": [
                     "site-github",
-                    "site-microsoft",
                     "site-telegram",
-                    "site-google-play"
+                    "site-google-play",
+                    "site-microsoft"
                 ],
                 "action": "route",
                 "outbound": "out_proxy"
