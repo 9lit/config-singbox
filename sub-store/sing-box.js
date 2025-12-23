@@ -51,23 +51,6 @@ config.outbounds.forEach(outbound => {
   }
 });
 
-const adguard_rule_set = {
-  tag: 'adguard',
-  type: 'remote',
-  url: "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/adguard.srs",
-  download_detour: "out_direct"
-}
-
-
-// 添加本地代理域名
-config.route.rules.map(i => {
-
-  if (['out_direct'].includes(i.action)) {
-    i.domain_suffix = ["1210923.xyz", "kumanine.dpdns.org", "kuma9.dpdns.org"]
-  }
-})
-
-
 
 // 如果为 true 则将 override_android_vpn = true
 config.route.override_android_vpn = isMobile()
