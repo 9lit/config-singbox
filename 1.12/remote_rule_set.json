@@ -6,14 +6,14 @@
     "dns": {
         "servers": [
             {
-                "tag": "dns_dot_Google",
+                "tag": "dns_proxy_bat",
                 "type": "tls",
                 "server": "dns.google",
                 "domain_resolver": "dns_resolver",
                 "detour": "\ud83d\udcaf \u8282\u70b9\u9009\u62e9"
             },
             {
-                "tag": "dns_doh_cloudflare",
+                "tag": "dns_proxy",
                 "type": "https",
                 "server": "cloudflare-dns.com",
                 "path": "/dns-query",
@@ -21,7 +21,7 @@
                 "detour": "\ud83d\udcaf \u8282\u70b9\u9009\u62e9"
             },
             {
-                "tag": "dns_doh_DNSPod",
+                "tag": "dns_direct_bat",
                 "type": "https",
                 "server": "sm2.doh.pub",
                 "path": "/dns-query",
@@ -29,7 +29,7 @@
                 "detour": "out_direct"
             },
             {
-                "tag": "dns_dot_Ali",
+                "tag": "dns_direct",
                 "type": "tls",
                 "server": "dns.alidns.com",
                 "domain_resolver": "dns_resolver",
@@ -42,12 +42,6 @@
                 "detour": "out_direct"
             },
             {
-                "tag": "fakeip",
-                "type": "fakeip",
-                "inet4_range": "198.18.0.0/15",
-                "inet6_range": "fc00::/18"
-            },
-            {
                 "tag": "dns_block",
                 "type": "hosts",
                 "path": [],
@@ -56,29 +50,22 @@
         ],
         "rules": [
             {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "server": "fakeip"
-            },
-            {
                 "rule_set": [
+                    "site-google-play",
                     "site-github",
-                    "site-microsoft",
                     "site-telegram",
-                    "site-google-play"
+                    "site-microsoft"
                 ],
                 "action": "route",
-                "server": "dns_dot_Google"
+                "server": "dns_proxy"
             },
             {
                 "rule_set": [
-                    "site-microsoft-cn",
-                    "site-cn"
+                    "site-cn",
+                    "site-microsoft-cn"
                 ],
                 "action": "route",
-                "server": "dns_dot_Ali"
+                "server": "dns_direct"
             },
             {
                 "rule_set": [
@@ -89,7 +76,7 @@
                 "server": "dns_block"
             }
         ],
-        "final": "dns_doh_cloudflare",
+        "final": "dns_proxy",
         "strategy": "prefer_ipv4",
         "disable_cache": false,
         "disable_expire": false,
@@ -131,7 +118,7 @@
     "outbounds": [],
     "route": {
         "auto_detect_interface": true,
-        "default_domain_resolver": "dns_resolver",
+        "default_domain_resolver": "dns_proxy",
         "rules": [
             {
                 "action": "sniff"
@@ -142,10 +129,10 @@
             },
             {
                 "rule_set": [
+                    "site-google-play",
                     "site-github",
-                    "site-microsoft",
                     "site-telegram",
-                    "site-google-play"
+                    "site-microsoft"
                 ],
                 "action": "route",
                 "outbound": "\ud83d\udcaf \u8282\u70b9\u9009\u62e9"
@@ -158,8 +145,8 @@
                     "kuma9.dpdns.org"
                 ],
                 "rule_set": [
-                    "site-microsoft-cn",
-                    "site-cn"
+                    "site-cn",
+                    "site-microsoft-cn"
                 ],
                 "action": "route",
                 "outbound": "out_direct"
@@ -233,8 +220,8 @@
         },
         "cache_file": {
             "enabled": true,
-            "cache_id": "",
-            "store_fakeip": true
+            "store_rdrc": true,
+            "rdrc_timeout": "3d"
         }
     }
 }
