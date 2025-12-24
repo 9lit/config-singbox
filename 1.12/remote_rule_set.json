@@ -53,8 +53,8 @@
                 "rule_set": [
                     "site-google-play",
                     "site-github",
-                    "site-telegram",
-                    "site-microsoft"
+                    "site-microsoft",
+                    "site-telegram"
                 ],
                 "action": "route",
                 "server": "dns_proxy"
@@ -131,8 +131,8 @@
                 "rule_set": [
                     "site-google-play",
                     "site-github",
-                    "site-telegram",
-                    "site-microsoft"
+                    "site-microsoft",
+                    "site-telegram"
                 ],
                 "action": "route",
                 "outbound": "\ud83d\udcaf \u8282\u70b9\u9009\u62e9"
