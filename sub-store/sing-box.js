@@ -17,7 +17,6 @@ config.outbounds.push(...proxies)
 const dns_server_tag = {
   dns_proxy: "dns_proxy",
   dns_direct: "dns_direct",
-  cloudflare_resolver: "hosts_cloudflare",
   dns_resolver: "ali_resolver",
   hosts_block: "hosts_block"
 }
@@ -32,7 +31,8 @@ const outbound_tag = {
 const outbound_selector_tag = {
   bilibili: "📺 哔哩哔哩",
   telegram: "✈️ telegram",
-  youtube: "▶️ Youtube"
+  youtube: "▶️ Youtube",
+  all_node: "🚀 全部节点"
 }
 
 const outbound_urltest_tag = {
@@ -52,7 +52,7 @@ const complete_outbound_selector = {
   type: "selector",
   default: "",
   outbounds: [
-    "out_direct"
+    outbound_tag.direct
   ]
 }
 
@@ -90,26 +90,42 @@ const diversion = {
   bilibili: {
     url: sing_geosite,
     name: "geosite-bilibili@!cn.srs",
+    tag: "site-bilibili"
+  },
+  bilibili_cdn: {
+    url: sing_geosite,
+    name: "geosite-bilibili-cdn@!cn.srs",
+    tag: "site-bilibili-cdn"
   },
   telegram: {
     url: sing_geosite,
     name: "geosite-telegram.srs",
+    tag: "site-telegram"
   },
   cn: {
     url: sing_geosite,
     name: "geosite-cn.srs",
+    tag: "site-cn"
   },
   google_play_cn: {
     url: sing_geosite,
-    name: "geosite-google-play@cn.srs"
+    name: "geosite-google-play@cn.srs",
+    tag: "site-google-play"
   },
   youtube: {
     url: sing_geosite,
-    name: "geosite-youtube.srs"
+    name: "geosite-youtube.srs",
+    tag: "site-youtube"
   },
   adguard: {
     url: ninelit,
-    name: "adguard.srs"
+    name: "adguard.srs",
+    tag: "site-adguard"
+  },
+  cloudflare_cn: {
+    url: sing_geosite,
+    name: "geosite-cloudflare.srs",
+    tag: "site-cloudflare-cn"
   }
 
 }
@@ -118,28 +134,13 @@ const diversion = {
  * 添加 dns.server dns服务器配置
  */
 
-// 添加 hosts_resolver
-let hosts_resolver = {}
-hosts_resolver.tag = "hosts_resolver"
-hosts_resolver.type = "hosts"
-hosts_resolver.path = []
-hosts_resolver.predefined = {
-  "cloudflare.com": "104.26.12.52",
-  localhost: [
-    "127.0.0.1",
-    "::1",
-    "172.18.0.1",
-    "fdfe:dcba:9876::1"
-  ]
-}
-
 // 添加 cloudflare_dns
 let cloudflare_dns = {}
 cloudflare_dns.tag = dns_server_tag.dns_proxy
 cloudflare_dns.type = 'https'
 cloudflare_dns.server = "cloudflare-dns.com"
 cloudflare_dns.path = "/dns-query"
-cloudflare_dns.domain_resolver = dns_server_tag.cloudflare_resolver
+cloudflare_dns.domain_resolver = dns_server_tag.dns_resolver
 cloudflare_dns.detour = outbound_tag.select
 
 // 添加 ali_resolver
@@ -156,12 +157,6 @@ ali_dns.server = "dns.alidns.com"
 ali_dns.domain_resolver = ali_resolver.tag
 ali_dns.detour = outbound_tag.direct
 
-config.dns.servers = []
-config.dns.servers.push(cloudflare_dns)
-config.dns.servers.push(ali_dns)
-config.dns.servers.push(hosts_resolver)
-config.dns.servers.push(ali_resolver)
-
 // block_hosts
 const block_hosts = {}
 block_hosts.tag = dns_server_tag.hosts_block
@@ -169,19 +164,25 @@ block_hosts.type = "hosts"
 block_hosts.path = []
 block_hosts.predefined = {}
 
+config.dns.servers = []
+config.dns.servers.push(cloudflare_dns)
+config.dns.servers.push(ali_dns)
+config.dns.servers.push(ali_resolver)
+config.dns.servers.push(block_hosts)
+
 
 // dns.rules 配置
-direct_dns_rules = {
-  "rule_set": "site-cn",
-  "action": "route",
-  "server": dns_server_tag.dns_direct
-}
 
-block_dns_rules = {
-  rule_set: 'adguard',
-  action: "route",
-  server: dns_server_tag.hosts_block
-}
+const dns_rules = JSON.parse(JSON.stringify(compatible_rules))
+delete dns_rules.outbound
+
+const block_dns_rules = JSON.parse(JSON.stringify(dns_rules))
+block_dns_rules.rule_set = diversion.adguard.tag
+block_dns_rules.server = dns_server_tag.hosts_block
+
+const direct_dns_rules = JSON.parse(JSON.stringify(dns_rules))
+direct_dns_rules.rule_set = diversion.cn.tag
+direct_dns_rules.server = dns_server_tag.dns_direct
 
 config.dns.rules.push(direct_dns_rules)
 config.dns.rules.push(block_dns_rules)
@@ -196,7 +197,7 @@ config.dns.final = dns_server_tag.dns_proxy
 // 获取 select 配置
 const select_outbound = JSON.parse(JSON.stringify(complete_outbound_selector));
 select_outbound.tag = outbound_tag.select;
-select_outbound.default = outbound_urltest_tag.auto
+select_outbound.default = outbound_urltest_tag.auto.tag
 
 // 添加 urltest 出站配置
 for (const urltest_tag in outbound_urltest_tag) {
@@ -209,7 +210,7 @@ for (const urltest_tag in outbound_urltest_tag) {
 
   // 按照节点国家进行分组
   config.outbounds.map(node => {
-    if (outbound_urltest_tag[urltest_tag].tag.includes(node.tag)) {
+    if (outbounds_urltest.tag.includes(node.tag)) {
       // 如果 匹配到 Auto 则加入全部的节点信息
       if (node.tag === outbound_urltest_tag.auto.tag) {
         node.outbounds.push(...getTags(proxies))
@@ -224,10 +225,11 @@ for (const urltest_tag in outbound_urltest_tag) {
   if (config.outbounds[index].outbounds.toString() === '') {
     config.outbounds.splice(index, 1)
   } else {
-    select_outbound.outbounds.push(urltest_tag.tag)
+    select_outbound.outbounds.push(outbounds_urltest.tag)
 
   }
 }
+
 
 // 按照应用进行分组， 添加 selector 出站
 for (const tag in outbound_selector_tag) {
@@ -239,14 +241,19 @@ for (const tag in outbound_selector_tag) {
   config.outbounds.map(node => {
 
     if (node.type === "urltest") {
-      if (["bilibili"].includes(tag)) { if (/中国/i.test(node.tag)) { outbound.outbounds.push(node.tag) } }
-      else { if (node.tag !== outbound_urltest_tag.auto) { outbound.outbounds.push(node.tag) } }
-    }
+      if (["bilibili"].includes(tag)) {
+        if (/中国/i.test(node.tag)) { outbound.outbounds.push(node.tag) }
+      }
+      else {
+        if (node.tag !== outbound_urltest_tag.auto.tag && "all_node" !== tag) { outbound.outbounds.push(node.tag) }
+      }
+    } else if ("all_node" === tag && node.type !== "selector") { outbound.outbounds.push(node.tag) }
   })
   config.outbounds.push(outbound)
 }
 
-
+// 添加全部的节点
+select_outbound.outbounds.push(outbound_selector_tag.all_node)
 // 添加 out_direct 和 out_block  以及 select 出站
 const block_outbound = {
   tag: outbound_tag.block,
@@ -283,7 +290,7 @@ config.route.default_domain_resolver = dns_server_tag.dns_resolver
 // 根据 UA 判断是否为安卓设备。若是则开启 vpn
 config.route.override_android_vpn = isMobile()
 // 设置 路由的默认出站
-config.final = outbound_selector_tag
+config.route.final = outbound_tag.select
 for (const app in diversion) {
   // route.rule-set 配置
   const rule_set = JSON.parse(JSON.stringify(compatible_rule_set));
