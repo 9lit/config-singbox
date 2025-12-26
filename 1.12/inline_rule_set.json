@@ -51,26 +51,26 @@
         "rules": [
             {
                 "rule_set": [
-                    "site-microsoft",
                     "site-github",
-                    "site-telegram",
-                    "site-google-play"
+                    "site-microsoft",
+                    "site-google-play",
+                    "site-telegram"
                 ],
                 "action": "route",
                 "server": "dns_proxy"
             },
             {
                 "rule_set": [
-                    "site-cn",
-                    "site-microsoft-cn"
+                    "site-microsoft-cn",
+                    "site-cn"
                 ],
                 "action": "route",
                 "server": "dns_direct"
             },
             {
                 "rule_set": [
-                    "adguard",
-                    "site-ads-all"
+                    "site-ads-all",
+                    "adguard"
                 ],
                 "action": "route",
                 "server": "dns_block"
@@ -129,10 +129,10 @@
             },
             {
                 "rule_set": [
-                    "site-microsoft",
                     "site-github",
-                    "site-telegram",
-                    "site-google-play"
+                    "site-microsoft",
+                    "site-google-play",
+                    "site-telegram"
                 ],
                 "action": "route",
                 "outbound": "\ud83d\udcaf \u8282\u70b9\u9009\u62e9"
@@ -145,16 +145,16 @@
                     "kuma9.dpdns.org"
                 ],
                 "rule_set": [
-                    "site-cn",
-                    "site-microsoft-cn"
+                    "site-microsoft-cn",
+                    "site-cn"
                 ],
                 "action": "route",
                 "outbound": "out_direct"
             },
             {
                 "rule_set": [
-                    "adguard",
-                    "site-ads-all"
+                    "site-ads-all",
+                    "adguard"
                 ],
                 "action": "reject"
             }
