@@ -51,26 +51,26 @@
         "rules": [
             {
                 "rule_set": [
-                    "site-github",
-                    "site-microsoft",
                     "site-google-play",
-                    "site-telegram"
+                    "site-telegram",
+                    "site-microsoft",
+                    "site-github"
                 ],
                 "action": "route",
                 "server": "dns_proxy"
             },
             {
                 "rule_set": [
-                    "site-microsoft-cn",
-                    "site-cn"
+                    "site-cn",
+                    "site-microsoft-cn"
                 ],
                 "action": "route",
                 "server": "dns_direct"
             },
             {
                 "rule_set": [
-                    "site-ads-all",
-                    "adguard"
+                    "adguard",
+                    "site-ads-all"
                 ],
                 "action": "route",
                 "server": "dns_block"
@@ -129,10 +129,10 @@
             },
             {
                 "rule_set": [
-                    "site-github",
-                    "site-microsoft",
                     "site-google-play",
-                    "site-telegram"
+                    "site-telegram",
+                    "site-microsoft",
+                    "site-github"
                 ],
                 "action": "route",
                 "outbound": "\ud83d\udcaf \u8282\u70b9\u9009\u62e9"
@@ -145,16 +145,16 @@
                     "kuma9.dpdns.org"
                 ],
                 "rule_set": [
-                    "site-microsoft-cn",
-                    "site-cn"
+                    "site-cn",
+                    "site-microsoft-cn"
                 ],
                 "action": "route",
                 "outbound": "out_direct"
             },
             {
                 "rule_set": [
-                    "site-ads-all",
-                    "adguard"
+                    "adguard",
+                    "site-ads-all"
                 ],
                 "action": "reject"
             }
@@ -3431,6 +3431,7 @@
                             "chinanetcenter.com",
                             "chinanews.com",
                             "chinanews.com.cn",
+                            "chinaott.com",
                             "chinapay.com",
                             "chinapp.net",
                             "chinapubmed.net",
@@ -3511,6 +3512,7 @@
                             "click.uve.mobile.sina.cn",
                             "click.uve.weibo.com",
                             "client-update.queniuqe.com",
+                            "clink.cn",
                             "clk1.cn",
                             "clk1.top",
                             "cloud-beijing.com",
@@ -3634,6 +3636,7 @@
                             "cmfunds.cn",
                             "cmicrwx.cn",
                             "cmpassport.com",
+                            "cmread.com",
                             "cmvideo.cn",
                             "cn",
                             "cn-cdn1.skymansion.net",
@@ -4110,6 +4113,7 @@
                             "draftstatic.com",
                             "dratio.com",
                             "drcnet.com.cn",
+                            "dreame.tech",
                             "dreams-travel.com",
                             "drivergenius.com",
                             "drmcmm.baidu.com",
@@ -4274,6 +4278,7 @@
                             "engkoo.com",
                             "enterdesk.com",
                             "eoeandroid.com",
+                            "eoffcn.com",
                             "eolink.com",
                             "er07.com",
                             "erji.net",
@@ -4303,7 +4308,9 @@
                             "expreview.com",
                             "extfans.com",
                             "extlog.snssdk.com",
+                            "eziot.com",
                             "ezpro.pro",
+                            "ezviz.com",
                             "f.cx",
                             "fa-part.com",
                             "faasapp.cn",
@@ -4892,10 +4899,15 @@
                             "hihonorcdn.com",
                             "hihonorcloud.com",
                             "hiido.com",
+                            "hik-cloud.com",
+                            "hik-express.com",
+                            "hikiot.com",
+                            "hikmall.com",
                             "hikunpeng.cn",
                             "hikunpeng.com",
                             "hikunpeng.com.cn",
                             "hikunpeng.net",
+                            "hikvision.com",
                             "hisensehitachi.com",
                             "hisilicon.com",
                             "hisilicon.com.cn",
@@ -5157,6 +5169,7 @@
                             "icloud.com.cn",
                             "icloud.net.cn",
                             "icloudapple.cn",
+                            "icntvcdn.com",
                             "iconfont.cn",
                             "icourse163.org",
                             "icourses.cn",
@@ -5269,6 +5282,7 @@
                             "insidear.cn",
                             "inspirecloud.cn",
                             "inspirecloud.com",
+                            "insta360.com",
                             "inte.sogou.com",
                             "inte.sogoucdn.com",
                             "intel.cn",
@@ -5551,6 +5565,7 @@
                             "jlcops.com",
                             "jlcsj.com",
                             "jlcsmt.com",
+                            "jmgo.com",
                             "jmlk.co",
                             "jmstatic.com",
                             "jnt-express.com.cn",
@@ -6136,6 +6151,7 @@
                             "mechrevo.com",
                             "medalink.cn",
                             "media.paperclipclub.net",
+                            "mediastory.cc",
                             "mediav.com",
                             "medicexam.net",
                             "meegobeta.com",
@@ -6210,6 +6226,7 @@
                             "migames.com",
                             "migu.cn",
                             "migucloud.com",
+                            "migufun.com",
                             "miguvideo.com",
                             "mihayo.com",
                             "mihayou.com",
@@ -7272,6 +7289,7 @@
                             "sou.com",
                             "soufunimg.com",
                             "souqian.com",
+                            "southcn.com",
                             "southmoney.com",
                             "sparenode.com",
                             "sparkletour.com",
@@ -7392,6 +7410,7 @@
                             "sxgou.cn",
                             "sxl.cn",
                             "sxlcdn.cn",
+                            "sydw8.com",
                             "syh.zybang.com",
                             "synology.cn",
                             "sys321.com",
@@ -8594,6 +8613,8 @@
                             "ypppt.com",
                             "yqb.com",
                             "yrz.name",
+                            "ys7.com",
+                            "ysjf.com",
                             "yslyhr.com",
                             "ystbds.com",
                             "ysten.com",
@@ -8725,9 +8746,11 @@
                             "zggbdszt.cn",
                             "zggbdszt.com.cn",
                             "zggbdszt.net.cn",
+                            "zggqzp.com",
                             "zgjm.org",
                             "zgjsks.com",
                             "zglxw.com",
+                            "zgsydw.com",
                             "zgxytc.com",
                             "zgzcw.com",
                             "zgzsa.com",
@@ -8883,31 +8906,31 @@
                             "zztfly.com"
                         ],
                         "domain_regex": [
-                            "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.xn--ngstr-lra8j\\.com$",
-                            "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.googlevideo\\.com$",
-                            "\\.(.+-)?ap-shenzhen(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            "\\.(.+-)?ap-guangzhou(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            "\\.(.+-)?ap-nanjing(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            "\\.(.+-)?ap-nanjing(-.+)?\\.myqcloud\\.com$",
+                            "\\.(.+-)?ap-shanghai(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
                             ".+\\.awsdns-cn-[0-9][a-e0-9]\\.cn$",
-                            "^epicgames-download\\d-\\d+\\.file\\.myqcloud\\.com$",
                             "\\.(.+-)?ap-beijing(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            "^gog-cdn-.+\\.footprint\\.net$",
+                            "^cdn\\d-epicgames-\\d+\\.file\\.myqcloud\\.com$",
+                            "\\.(.+-)?ap-chengdu(-.+)?\\.myqcloud\\.com$",
+                            "^cdn-akamai-.+\\.gog-services\\.com$",
                             ".+\\.awsdns-cn-[0-9][0-9]\\.(biz|com|net|top)$",
-                            "\\.(.+-)?ap-shanghai(-.+)?\\.myqcloud\\.com$",
+                            "^epicgames-download\\d-\\d+\\.file\\.myqcloud\\.com$",
+                            "\\.(.+-)?ap-guangzhou(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
+                            "\\.(.+-)?ap-nanjing(-.+)?\\.myqcloud\\.com$",
+                            "\\.(.+-)?ap-chongqing(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
                             "^.+-mihayo\\.akamaized\\.net$",
+                            "\\.(.+-)?ap-shanghai(-.+)?\\.myqcloud\\.com$",
+                            "\\.(.+-)?ap-shenzhen(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
+                            "\\.(.+-)?ap-guangzhou(-.+)?\\.myqcloud\\.com$",
+                            "\\.(.+-)?ap-chongqing(-.+)?\\.myqcloud\\.com$",
+                            "^gog-cdn-.+\\.footprint\\.net$",
+                            "\\.(.+-)?ap-beijing(-.+)?\\.myqcloud\\.com$",
+                            "^nis.+\\.10010\\.com$",
+                            "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.googlevideo\\.com$",
+                            "\\.(.+-)?ap-chengdu(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
+                            "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.xn--ngstr-lra8j\\.com$",
                             "^images(-\\d)?\\.gog-statics\\.com$",
                             "\\.(.+-)?ap-shenzhen(-.+)?\\.myqcloud\\.com$",
-                            "\\.(.+-)?ap-shanghai(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            "^nis.+\\.10010\\.com$",
-                            "\\.(.+-)?ap-chongqing(-.+)?\\.myqcloud\\.com$",
-                            "\\.(.+-)?ap-chengdu(-.+)?\\.myqcloud\\.com$",
-                            "\\.(.+-)?ap-chongqing(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            "^cdn-akamai-.+\\.gog-services\\.com$",
-                            "^cdn\\d-epicgames-\\d+\\.file\\.myqcloud\\.com$",
-                            "\\.(.+-)?ap-chengdu(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$",
-                            "\\.(.+-)?ap-guangzhou(-.+)?\\.myqcloud\\.com$",
-                            "\\.(.+-)?ap-beijing(-.+)?\\.myqcloud\\.com$"
+                            "\\.(.+-)?ap-nanjing(-.+)?\\.tencentcos\\.(cn|com(\\.cn)?)$"
                         ]
                     }
                 ]
