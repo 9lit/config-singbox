@@ -51,10 +51,10 @@
         "rules": [
             {
                 "rule_set": [
-                    "site-telegram",
                     "site-google-play",
+                    "site-github",
                     "site-microsoft",
-                    "site-github"
+                    "site-telegram"
                 ],
                 "action": "route",
                 "server": "dns_proxy"
@@ -129,10 +129,10 @@
             },
             {
                 "rule_set": [
-                    "site-telegram",
                     "site-google-play",
+                    "site-github",
                     "site-microsoft",
-                    "site-github"
+                    "site-telegram"
                 ],
                 "action": "route",
                 "outbound": "\ud83d\udcaf \u8282\u70b9\u9009\u62e9"
