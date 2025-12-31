@@ -52,8 +52,8 @@
             {
                 "rule_set": [
                     "site-microsoft",
-                    "site-google-play",
                     "site-telegram",
+                    "site-google-play",
                     "site-github"
                 ],
                 "action": "route",
@@ -130,8 +130,8 @@
             {
                 "rule_set": [
                     "site-microsoft",
-                    "site-google-play",
                     "site-telegram",
+                    "site-google-play",
                     "site-github"
                 ],
                 "action": "route",
@@ -164,49 +164,49 @@
                 "type": "remote",
                 "tag": "adguard",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/adguard.srs"
+                "url": "https://raw.githubusercontent.com/kumalum/config-singbox/rule-set/adguard.srs"
             },
             {
                 "type": "remote",
                 "tag": "site-ads-all",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-ads-all.srs"
+                "url": "https://raw.githubusercontent.com/kumalum/config-singbox/rule-set/site-ads-all.srs"
             },
             {
                 "type": "remote",
                 "tag": "site-cn",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-cn.srs"
+                "url": "https://raw.githubusercontent.com/kumalum/config-singbox/rule-set/site-cn.srs"
             },
             {
                 "type": "remote",
                 "tag": "site-github",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-github.srs"
+                "url": "https://raw.githubusercontent.com/kumalum/config-singbox/rule-set/site-github.srs"
             },
             {
                 "type": "remote",
                 "tag": "site-google-play",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-google-play.srs"
+                "url": "https://raw.githubusercontent.com/kumalum/config-singbox/rule-set/site-google-play.srs"
             },
             {
                 "type": "remote",
                 "tag": "site-microsoft-cn",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-microsoft-cn.srs"
+                "url": "https://raw.githubusercontent.com/kumalum/config-singbox/rule-set/site-microsoft-cn.srs"
             },
             {
                 "type": "remote",
                 "tag": "site-microsoft",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-microsoft.srs"
+                "url": "https://raw.githubusercontent.com/kumalum/config-singbox/rule-set/site-microsoft.srs"
             },
             {
                 "type": "remote",
                 "tag": "site-telegram",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/9lit/config-singbox/rule-set/site-telegram.srs"
+                "url": "https://raw.githubusercontent.com/kumalum/config-singbox/rule-set/site-telegram.srs"
             }
         ],
         "final": "\ud83d\udcaf \u8282\u70b9\u9009\u62e9"
